@@ -19,7 +19,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'stanley_outlet_control = stanley_outlet_control.stanley_controller.main'  # noqa
+            'stanley-outlet-control = stanley_outlet_control.stanley_controller:main'  # noqa
         ],
     },
 )
