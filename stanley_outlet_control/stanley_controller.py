@@ -55,7 +55,7 @@ class StanleyController(gr.top_block):
         self.osmosdr_sink_0.set_bandwidth(2000000, 0)
 
         self.blocks_vector_source_x_0 = blocks.vector_source_c(
-            (([int(v) for v in vector] + [0]*25) * 100), False, 1, []
+            (([int(v) for v in vector] + [0]*25) * 25), False, 1, []
         )
         self.blocks_repeat_0 = blocks.repeat(gr.sizeof_gr_complex*1, interp)
         self.blocks_moving_average_xx_0 = blocks.moving_average_cc(
