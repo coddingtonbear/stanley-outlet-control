@@ -12,12 +12,24 @@ Requirements
 Installation
 ------------
 
-::
+Just install directly from pip::
 
     pip install stanley-outlet-control
 
+
+Use
+---
+
+::
+
+    stanley-outlet-control [outlet number] [on|off]
+
 Notes
 -----
+
+This is currently set up to use a HackRF, but if you have any experience with
+Gnuradio, you should be able to easily alter this to be usable via any
+SDR transmitter.
 
 * Modulation: On-off-keyed.
 * Frequency: 433.839 MHz
