@@ -33,6 +33,7 @@ SDR transmitter.
 
 * Modulation: On-off-keyed.
 * Frequency: 433.839 MHz
+* Bit rate: 1872bps
 * Control Signals:
 
   * Outlet #1
