@@ -104,7 +104,7 @@ class StanleyController(gr.top_block):
         self.osmosdr_sink_0.set_center_freq(self.center_freq, 0)
 
 
-if __name__ == '__main__':
+def main():
     parser = ArgumentParser()
     parser.add_argument('outlet_number', choices=OUTLETS.keys())
     parser.add_argument('set_to', choices=('on', 'off'))
