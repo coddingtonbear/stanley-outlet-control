@@ -1,0 +1,13 @@
+*.pyc
+bin/*
+lib/*
+src/*
+man/*
+dist/*
+docs/build/*
+include/*
+.Python
+*egg*
+share/*
+.tox/*
+.noseids

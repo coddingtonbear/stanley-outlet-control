@@ -13,7 +13,23 @@ from argparse import ArgumentParser
 import osmosdr
 
 
-class StanleyVectorTx(gr.top_block):
+OUTLETS = {
+    '1': {
+        'off': '1001101001101001101001101001001101101001001001101001101001001001001001001',  # noqa
+        'on': '1001101001101001101001101001001101101001001001101001101001001001001101101',  # noqa
+    },
+    '2': {
+        'off': '1001101001101001101001101101101001001001001001101001101001001101101001001',  # noqa
+        'on': '1001101001101001101001101101101001001001001001101001101001001101101001001',  # noqa
+    },
+    '3': {
+        'off': '1001101001101001101001101001001001001101101001101001101001001001001001001',  # noqa
+        'on': '1001101001101001101001101001001001001101101001101001101101101001001001001',  # noqa
+    }
+}
+
+
+class StanleyController(gr.top_block):
     def __init__(self, vector):
         gr.top_block.__init__(self, "Stanley Tx")
 
@@ -90,8 +106,12 @@ class StanleyVectorTx(gr.top_block):
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('vector', help='Binary bits to transmit')
+    parser.add_argument('outlet_number', choices=OUTLETS.keys())
+    parser.add_argument('set_to', choices=('on', 'off'))
     args = parser.parse_args()
-    tb = StanleyVectorTx(args.vector)
+
+    vector = OUTLETS[args.outlet_number][args.set_to]
+
+    tb = StanleyController(vector)
     tb.start()
     tb.wait()
