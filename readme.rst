@@ -9,6 +9,13 @@ Requirements
 * Gnuradio
 * gr-osmocom
 
+Installation
+------------
+
+::
+
+    pip install stanley-outlet-control
+
 Notes
 -----
 
