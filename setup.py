@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='stanley-outlet-control',
-    version='1.0.1',
+    version='1.0.2',
     url='https://github.com/coddingtonbear/stanley-outlet-control',  # noqa
     description=(
         'Remotely control your remotely-controlled Stanley AC outlets using '
