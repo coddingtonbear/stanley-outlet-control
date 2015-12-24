@@ -3,6 +3,8 @@ Stanley AC Outlet Remote Controller
 
 Use your HackRF for controlling your Stanley remotely-controlled AC outlets.
 
+My progress on the gnuradio flowchart was helped greatly by discovering `Clayton Smith's blog post about reverse-engineering the radio signals used for controlling a ceiling fan <http://www.irrational.net/2014/03/22/reverse-engineering-a-ceiling-fan/>`_.
+
 Requirements
 ------------
 
